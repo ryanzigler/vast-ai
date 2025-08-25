@@ -21,24 +21,35 @@ NODES=(
 )
 
 WORKFLOWS=(
-    "https://gist.githubusercontent.com/robballantyne/f8cb692bdcd89c96c0bd1ec0c969d905/raw/2d969f732d7873f0e1ee23b2625b50f201c722a5/flux_dev_example.json"
+    #"https://gist.githubusercontent.com/robballantyne/f8cb692bdcd89c96c0bd1ec0c969d905/raw/2d969f732d7873f0e1ee23b2625b50f201c722a5/flux_dev_example.json"
 )
 
 CLIP_MODELS=(
-    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
-    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+    #"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
+    #"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
 )
 
 UNET_MODELS=(
-    "https://huggingface.co/lodestones/Chroma/resolve/main/chroma-unlocked-v48-detail-calibrated.safetensors"
+    #"https://huggingface.co/lodestones/Chroma/resolve/main/chroma-unlocked-v48-detail-calibrated.safetensors"
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/GODZiGGA/m3gan_chroma_lora/resolve/main/m3gan_chroma_2_000001250.safetensors"
+    #"https://huggingface.co/GODZiGGA/m3gan_chroma_lora/resolve/main/m3gan_chroma_2_000001250.safetensors"
+    "https://huggingface.co/GODZiGGA/megan_qwen/resolve/main/lora.safetensors"
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
+    #"https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
+    "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/blob/main/split_files/vae/qwen_image_vae.safetensors"
+)
+
+TEXT_ENCODERS=(
+    "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/blob/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors"
+)
+
+DIFFUSION_MODELS=(
+    "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/blob/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors"
+    "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/blob/main/split_files/diffusion_models/qwen_image_edit_fp8_e4m3fn.safetensors"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -56,6 +67,12 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/unet" \
         "${UNET_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/diffusion_models" \
+        "${DIFFUSION_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/text_encoders" \
+        "${TEXT_ENCODERS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/lora" \
         "${LORA_MODELS[@]}"
