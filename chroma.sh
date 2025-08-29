@@ -36,6 +36,7 @@ UNET_MODELS=(
 LORA_MODELS=(
     #"https://huggingface.co/GODZiGGA/m3gan_chroma_lora/resolve/main/m3gan_chroma_2_000001250.safetensors"
     "https://huggingface.co/GODZiGGA/megan_qwen/resolve/main/lora.safetensors"
+    "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-4steps-V1.0.safetensors"
 )
 
 VAE_MODELS=(
