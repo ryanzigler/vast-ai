@@ -35,7 +35,7 @@ UNET_MODELS=(
 
 LORA_MODELS=(
     #"https://huggingface.co/GODZiGGA/m3gan_chroma_lora/resolve/main/m3gan_chroma_2_000001250.safetensors"
-    "https://huggingface.co/GODZiGGA/megan_qwen/resolve/main/lora.safetensors"
+    #"https://huggingface.co/GODZiGGA/megan_qwen/resolve/main/lora.safetensors"
     "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-4steps-V1.0.safetensors"
 )
 
@@ -49,8 +49,9 @@ TEXT_ENCODERS=(
 )
 
 DIFFUSION_MODELS=(
-    "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors"
-    "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_fp8_e4m3fn.safetensors"
+https://huggingface.co/GODZiGGA/megan_qwen_finetune/resolve/main/megan_qwen_finetune_v1-000100.safetensors
+    #"https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors"
+    #"https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_fp8_e4m3fn.safetensors"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
